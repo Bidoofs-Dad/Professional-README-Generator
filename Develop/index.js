@@ -5,35 +5,45 @@ const fs = require("fs");
 const questions = [
     {
         type: "input",
-        name: "fullName",
-        message: "What is your first and last name?",
-      },
-      {
+        name: "title",
+        message: "What is your repository called?",
+    },
+    {
         type: "input",
         name: "location",
         message: "Where do you live?",
-      },
-      {
+    },
+    {
         type: "input",
-        name: "bio",
-        message: "Say a little bit about yourself!",
-      },
-      {
+        name: "description",
+        message: "Tell me about your repository! This will be included in the 'Description' tab of your README.",
+    },
+    {
         type: "input",
-        name: "linkedInURL",
-        message: "Include your a link to your LinkedIn!",
-      },
-      {
-          type: "input",
-          name: "gitHubURL",
-          message: "Include your a link to your GitHub!",
-        }
+        name: "installation",
+        message: "What steps are required to install your application, if any?",
+    },
+    {
+        type: "input",
+        name: "usage",
+        message: "Please include instructions on how to use your application! You will also find a blank spot in your README below what you type here, that you can link a screenshot to.",
+    },
+    {
+        type: "input",
+        name: "contribution",
+        message: "Please include any contributions that you may have had!",
+    },
+    {
+        type: "input",
+        name: "test",
+        message: "Please explain how one can test your application!",
+    }
 ];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
     fs.writeFile("portfolio.md", portfolioRequested, (err) =>
-      err ? console.log(err) : console.log("Success!")
+        err ? console.log(err) : console.log("Success!")
     );
 }
 
