@@ -34,9 +34,11 @@ const questions = [
         message: "Please explain how one can test your application!",
     },
     {
-        type: "input",
+        type: "checkbox",
         name: "license",
-        message: "Please explain how one can test your application!",
+        message: "Please choose a license for your repository",
+        choices: ["None", "Mozilla Public License 2.0",
+    "Apache License 2.0", "MIT License"]
     },
     {
         type: "input",
