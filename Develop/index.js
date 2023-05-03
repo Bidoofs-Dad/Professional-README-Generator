@@ -10,11 +10,6 @@ const questions = [
     },
     {
         type: "input",
-        name: "location",
-        message: "Where do you live?",
-    },
-    {
-        type: "input",
         name: "description",
         message: "Tell me about your repository! This will be included in the 'Description' tab of your README.",
     },
@@ -37,6 +32,21 @@ const questions = [
         type: "input",
         name: "test",
         message: "Please explain how one can test your application!",
+    },
+    {
+        type: "input",
+        name: "license",
+        message: "Please explain how one can test your application!",
+    },
+    {
+        type: "input",
+        name: "username",
+        message: "What is your GitHub username?",
+    },
+    {
+        type: "input",
+        name: "email",
+        message: "what email is the best way to reach you with any further questions?",
     }
 ];
 
