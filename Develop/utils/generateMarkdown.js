@@ -30,7 +30,7 @@ function renderLicenseLink(license) {
     licenseLink = "https://choosealicense.com/licenses/apache-2.0/";
   }
   if (data.license === "MIT License"){
-    licenseLink = "https://choosealicense.com/licenses/mit/";
+    data.license = "https://choosealicense.com/licenses/mit/";
   }
 }
 
@@ -40,9 +40,51 @@ function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  inquirer.prompt(portfolio).then((response) => {
-    const portfolioRequested = ``})
-  return `# ${data.title}`
+  return `# ${data.title}
+
+  ## Description
+  
+  ${data.description}
+  
+  ![badge]${badgelink}
+  
+  ## Table of Contents 
+  
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Credits](#credits)
+  - [License](#license)
+  
+  ## Installation
+  
+  ${data.installation}
+  
+  ## Usage
+  
+  ${data.usage}
+  
+     ![-YOUR PROJECT NAME](-LINK TO YOUR SCREENSHOT-)
+  
+  ## Credits
+  
+  ${data.contribution}
+  
+  ## Questions
+  
+  If you have any further questions, or would like to get ahold of me, contact me below!
+  
+  * GitHub: ${data.username}
+  
+  * Email: ${data.email}
+  
+  ## License
+  
+  For more information about the license that was used, follow the link below!
+  
+  ${licenseLink}
+  
+  ---
+  `
   };
 
-// module.exports = generateMarkdown;
+module.exports = generateMarkdown;

@@ -38,7 +38,7 @@ const questions = [
         name: "license",
         message: "Please choose a license for your repository",
         choices: ["None", "Mozilla Public License 2.0",
-    "Apache License 2.0", "MIT License"]
+            "Apache License 2.0", "MIT License"]
     },
     {
         type: "input",
@@ -53,14 +53,21 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
-    fs.writeFile("portfolio.md", portfolioRequested, (err) =>
-        err ? console.log(err) : console.log("Success!")
-    );
-}
+// function writeToFile(fileName, data) {
+//     fs.writeFile("professionalREADME.md", data, (err) =>
+//         err ? console.log(err) : console.log("Success!")
+//     );
+// }
 
 // TODO: Create a function to initialize app
-// function init() {}
+function init() {
+    inquirer.prompt(questions).then((data) => {
+        fs.writeFile("professionalREADME.md", generateMarkdown(data), (err) =>
+            err ? console.log(err) : console.log("Success!")
+        );
+    }
+    )
+}
 
 // Function call to initialize app
-// init();
+init();
