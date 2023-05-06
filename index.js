@@ -22,7 +22,7 @@ const questions = [
     {
         type: "input",
         name: "usage",
-        message: "Please include instructions on how to use your application! You will also find a blank spot in your README below what you type here, that you can link a screenshot to.",
+        message: "Please include instructions on how to use your application! (A spot to include a screenshot will be inside your README after generating.)",
     },
     {
         type: "input",
@@ -56,7 +56,7 @@ const questions = [
 // TODO: Create a function to initialize app
 function init() {
     inquirer.prompt(questions).then((data) => {
-        fs.writeFile("professionalREADME.md", generateMarkdown(data), (err) =>
+        fs.writeFile("Generated README.md", generateMarkdown(data), (err) =>
             err ? console.log(err) : console.log("Success!")
         );
     }
