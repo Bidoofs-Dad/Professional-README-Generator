@@ -29,11 +29,6 @@ const questions = [
         name: "contribution",
         message: "Please include any contributions that you may have had!",
     },
-    // {
-    //     type: "input",
-    //     name: "test",
-    //     message: "Please explain how one can test your application!",
-    // },
     {
         type: "list",
         name: "license",

@@ -1,4 +1,5 @@
 // TODO: Create a function to generate markdown for README
+//Instead of having multiple functions, i condesnsed their uses inside of one, I feel it looks cleaner this way.
 function generateMarkdown(data) {
 
   if (data.license === "Mozilla Public License 2.0") {
